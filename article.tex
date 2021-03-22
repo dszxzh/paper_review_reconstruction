@@ -1,0 +1,82 @@
+\documentclass[journal, twocolumn]{IEEEtran}
+\usepackage[acronym]{glossaries}
+\usepackage{lineno,hyperref}
+\usepackage[margins]{trackchanges}
+\usepackage{cite}
+%\usepackage{xcolor}
+%\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{algorithmic}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+% \usepackage{subfigure}
+% \usepackage{multirow}
+% \usepackage{array}
+% \usepackage{stfloats}
+% \usepackage{textcomp}
+% \usepackage{tikz}
+
+\input{comments.tex}    % remove this if there is no comments 
+\input{math.tex}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+
+
+\author{
+  Ziqiang Cui,~\IEEEmembership{Member,~IEEE,}
+  Andy~Lau, 
+  and~Huaxiang~Wang,~\IEEEmembership{Senior~Member,~IEEE}% <-this % stops a space
+\thanks{Dr. Ziqiang Cui was with the School of
+of Electrical and Information Engineering, Tianjin University, Tianjin 300072, China.
+Correspondance e-mail: cuiziqiang@tju.edu.cn.}% <-this % stops a space
+\thanks{This research is financially supported by NSFC, Nos. 61671319 and 61627803.}% <-this % stops a space
+\thanks{Manuscript updated \today and submitted Feb 28, 2020.}}
+
+\maketitle
+
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+\begin{IEEEkeywords}
+IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+
+\annote{Text}{Blablabla...abcdef}
+
+
+
+\IEEEpeerreviewmaketitle
+
+
+
+% Sections
+\input{sections/sec_intro.tex}
+\input{sections/sec_method.tex}
+\input{sections/sec_results.tex}
+\input{sections/sec_cons.tex}
+
+%\input{sections/sec_appendix.tex}
+
+\section*{Acknowledgment}
+
+The authors would like to thank the financial supports from NSFC (Nos. 61671319 and 61627803).
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+% Bibliography
+\bibliographystyle{IEEEtran}
+% Bibliography file
+\bibliography{../ieee-latex-template-v2/zotero}
+
+
+% \input{sections/biography.tex}
+\end{document}

@@ -1,0 +1,8 @@
+% Include this file to add \mir{} \mar{} comments.
+
+\usepackage[textsize=small,backgroundcolor=white]{todonotes}
+\newcounter{Exe}
+\newcommand{\mar}[1]{\refstepcounter{Exe} \textcolor{red}{\todo[inline]{\textbf{Major revision \#\arabic{Exe}}: #1}}}
+\newcommand{\mir}[1]{\refstepcounter{Exe} \textcolor{blue}{\todo[inline]{\textbf{Minor revision \#\arabic{Exe}}: #1}}}
+
+\newcommand{\rev}[1]{\textcolor{blue}{\textbf{Revise:}}\textcolor{red}{#1}}

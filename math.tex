@@ -1,0 +1,174 @@
+\newcommand{\maxwell}
+{
+\begin{align}
+\nabla\times {\mathbf{E}}&=-\frac{\partial {\mathbf{B}}}{\partial t}  \\
+\nabla\times {\mathbf{H}}&={\mathbf{J}}+\frac{\partial {\mathbf{D}}}{\partial t}  \\
+\nabla\cdot {\mathbf{B}}&=0  \\
+\nabla\cdot {\mathbf{D}}&=\rho 
+\label{eq:maxwell}
+\end{align}
+}
+
+
+\newcommand{\maxwella}
+{\begin{align}
+{\mathbf{B}}&=\mu {\mathbf{H}}  \\
+{\mathbf{D}}&=\varepsilon {\mathbf{E}}  \\
+{\mathbf{J}}&=\sigma {\mathbf{E}} 
+\label{eq:maxwella}
+\end{align}
+}
+
+
+\newcommand{\ect}
+{
+\begin{equation}
+   \nabla \cdot\left(\varepsilon \nabla \varphi \right)=0
+\label{eq:ect}
+\end{equation}
+}
+
+\newcommand{\ecrt}
+{
+\begin{equation}
+  \nabla \cdot\left[(\sigma +j\omega \varepsilon )\nabla \varphi \right]=0
+\label{eq:ecrt}
+\end{equation}}
+
+\newcommand{\ectb}
+{
+\begin{equation}
+\left\{
+\begin{array}{rl}
+    \varphi_{\Gamma_e}=&V_e\\
+    \varphi_{\Gamma_m}=&0\\
+    \varphi_{\Gamma_{s}}=&0\\
+\end{array}
+\right.  
+\label{eq:ectb}
+\end{equation}
+}
+
+
+\newcommand{\capacitance}
+{
+\begin{equation}
+  C=\frac{Q}{V_e}=-\frac{1}{V_e}\int_{\Omega_m}\varepsilon(x,y,z)\nabla\varphi(x,y,z) d\Omega
+\label{eq:capacitance}  
+\end{equation}
+}
+
+\newcommand{\emt}
+{
+\begin{equation}
+  \nabla\times \left[\left(\nabla \times \frac{\mathbf{B}}{\mu}\right)/\sigma\right]=-j\omega \mathbf{B}  
+  \label{eq:emt}
+\end{equation}
+}
+
+\newcommand{\emta}
+{
+  \begin{equation}
+  \nabla^2\mathbf{A}+j\omega\mu\sigma \mathbf{A}=\mu \mathbf{J}
+  \label{eq:emta}
+\end{equation}
+}
+
+
+\newcommand{\deltaz}
+{
+  \begin{align}
+    \Delta Z &= \frac{1}{I^2}\int_{\Omega}j\omega(\mu_x-\mu_0)\mathbf{H}_x\cdot\mathbf{H}_0 \nonumber\\
+    &-(\sigma_x-\sigma_0+j\omega\varepsilon_x-j\omega\varepsilon_0)\mathbf{E}_x\cdot\mathbf{E}_0 d\Omega
+    \label{eq:deltaz}
+  \end{align}
+}
+
+
+\newcommand{\snr}
+{
+  \begin{equation}
+    \mathbf{SNR} = -20\lg\left[\frac{1}{\mu}\sqrt{\frac{1}{n}\sum\limits_{i=1}^{n}(x_i-\mu)^{2}}\right]
+    \label{eq:snr}
+  \end{equation}
+}
+
+
+\newcommand{\snrd}
+{
+  \begin{equation}
+    \mathbf{SNR_\Delta} = -20\lg\left[\frac{1}{|\mu_h-\mu_l|}\sqrt{\frac{1}{n}\sum\limits_{i=1}^{n}(x_i-\mu_h)^{2}}\right]    \label{eq:snrd}
+  \end{equation}
+}
+
+\newcommand{\corrcoe}
+{
+  \begin{equation}
+    r=\frac{\sum_{i=1}^{N}\left(\hat{\mathbf{g}}_{i}-\overline{\hat{\mathbf{g}}}\right)\left(\mathbf{g}_{i}-\overline{\mathbf{g}}\right)}{\sqrt{\sum_{i=1}^{N}\left(\hat{\mathbf{g}}_{i}-\overline{\hat{\mathbf{g}}}\right)^{2} \sum_{i=1}^{N}\left(\mathbf{g}_{i}-\overline{\mathbf{g}}\right)^{2}}}
+    \label{eq:corrcoe}
+  \end{equation}
+}
+
+\newcommand{\rmse}{
+  \begin{equation}
+    \mathbf{RMSE} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(\hat{\delta}_{i} - \delta_{i})^2}
+    \label{eq:rmse}
+  \end{equation}
+}
+
+\newcommand{\emap}
+{
+  \begin{equation}\label{eq:normc}
+    \delta_h^p = \frac{C_{e}-C_{l}}{C_{h}-C_{l}}
+    \end{equation}
+}
+
+\newcommand{\emas}
+{
+  \begin{equation}\label{eq:emas}
+    \delta_h^s = \frac{C_{h}}{C_{e}}\frac{(C_{e}-C_{l})}{(C_{h}-C_{l})}=\left(\frac{C_h}{C_e}\right)\delta_h^p
+  \end{equation}
+}
+
+\newcommand{\emamg}
+{
+  \begin{equation}\label{eq:emamg}
+    \delta_{h}^{MG}
+    =\frac{(C_{h}+2C_{l})}{(C_{e}+2C_{l})}\frac{(C_{e}-C_{l})}{(C_{h}-C_{l})}
+    =\left(\frac{C_{h}+2C_{l}}{C_{e}+2C_{l}}\right) \delta_h^p
+    \end{equation}
+}
+
+\newcommand{\emabo}{
+  \begin{equation}\label{eq:emabo}
+  \delta_h^{Bo}=
+  \frac{(C_h+2C_e)}{3C_e}\frac{(C_{e}-C_{l})}{(C_{h}-C_{l})}
+  =\left(\frac{2C_{e}+C_{h}}{3C_{e}}\right)\delta_h^p
+\end{equation}
+}
+
+\newcommand{\emabr}{
+  \begin{equation}\label{eq:emabr}
+  \delta_h^{Br}= \frac{C_{e}+C_{h}}{2C_{e}}\frac{(C_{e}-C_{l})}{(C_{h}-C_{l})}
+  =\left(\frac{C_{e}+C_{h}}{2C_{e}}\right)\delta_h^p
+\end{equation}
+}
+
+\newcommand{\emft}{
+  \begin{equation} \label{eq:emft}
+    \nabla \cdot \sigma \nabla \varphi = \nabla \cdot \sigma (\vec {v} \times \vec {B}), 
+\end{equation}
+}
+
+
+\newcommand{\emftb}{
+  \begin{align*} 
+    \frac {\partial \varphi}{\partial \hat {n}}=&0, \quad \vec {r} \in \partial \Omega, 
+    \\ 
+    \vec {v}=&0, \quad \vec {r} \in \partial \Omega _{\mathrm{wall}}, 
+    \\ 
+    \vec {B}=&0, \quad \vec {r} \in \partial \Omega _{\mathrm{ends}}, 
+  \end{align*}  
+}
+
+
