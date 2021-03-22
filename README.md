@@ -153,7 +153,6 @@ IEEEtran规范要求打印文章书目，您必须至少具有
 * 2_autopush.sh: 提交文件至github。
 
 
-```
 ### 4.3 检查论文
 
 * 格式方面的问题可参考： https://github.com/etgroup/paper_checklist 
