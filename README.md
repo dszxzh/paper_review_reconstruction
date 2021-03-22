@@ -1,3 +1,4 @@
+
 # IEEE-latex-template-v2
 
 ## 1. 说明
@@ -158,6 +159,34 @@ IEEEtran规范要求打印文章书目，您必须至少具有
 * 格式方面的问题可参考： https://github.com/etgroup/paper_checklist 
 * 论文拼写错误，句法错误应当完全避免，可以使用一些带语法检查功能的软件，如Word，Grammarly等。
 
+
+#  论文框架
+
+## 1 Introduction
+
+### 1.1 重建算法知识总体系
+
+### 1.2 前人的综述和我们的工作
+
+### 1.3 近年研究热点与倾向
+
+## 2 Development of image reconstruction algorithm
+
+### 2.1 正则化
+
+### 2.2 边界映射
+
+### 2.3 深度学习
+
+### ……
+
+## 3 Evaluation of algorithms 
+
+### 精度、速度与适用范围
+
+## 4 Conclusion
+
+### 总结方法特点，建议未来发展方向
 
 
 
