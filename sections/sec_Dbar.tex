@@ -1,0 +1,101 @@
+
+%!TEX root = ../article.tex
+
+% Entry point for sections:
+%
+% This file specifies the sections and  its respective order in which they must
+% be included.
+
+% Article Sections
+\section{D-bar method}
+\label{sec:D-bar method}
+
+In the case of conductivity reconstruction in $\Omega $ in the space of ${R^2}$, the relationship between the conductivity $\sigma (x,y)$ and electric potential $u(x,y)$ can be described by a Laplace function,
+
+\begin{equation}\label{equ:ert_gov}
+\nabla  \cdot \left( {\sigma \left( {x,y} \right)\nabla u\left( {x,y} \right)} \right) = 0 \left( {x,y} \right) \in {\rm{\Omega }}
+\end{equation}
+
+The transformation from electric potential to electric current density is the physical interpretation of Dirichlet-to-Neumann (DN) map, \emph{i.e.}
+
+\begin{equation}\label{equ:DN_sig}
+{\Lambda _\sigma }:{\left. {u\left( {x,y} \right)} \right|_{\partial {\rm{\Omega }}}} \to \sigma \left( {x,y} \right){\left. {\frac{{\partial u}}{{\partial v}}} \right|_{\partial {\rm{\Omega }}}}
+\end{equation}
+
+It has been proved in the literature \cite{Brown1997UniquenessIT,Nachman1996Global} that the conductivity of measuring region can be uniquely determined by the DN map on the boundary.
+
+Introducing the variables $q = \frac{{\Delta \sqrt \sigma  }}{{\sqrt \sigma  }}$ and $\tilde u = \sqrt \sigma  u$, equation (\ref{equ:ert_gov}) becomes a Schr$\ddot{o}$dinger equation, which has the steady-state exponentially growing solutions, as
+
+\begin{equation}\label{equ:Schr}
+\left( { - \Delta  + q\left( {x,y} \right)} \right)\tilde u\left( {x,y} \right) = 0
+\end{equation}
+
+The following relationship holds for the DN map of $q$ and  $\sigma $ \cite{Deangelo20102D}
+
+\begin{equation}\label{equ:DN_q_sig}
+{\Lambda _q}:{\left. {\tilde u} \right|_{\partial {\rm{\Omega }}}} \to \frac{{\partial \tilde u}}{{\partial v}}, \quad {\Lambda _q} = {\sigma ^{ - \frac{1}{2}}} \left( {{\Lambda _\sigma } + \frac{1}{2}\frac{{\partial \sigma }}{{\partial v}}} \right){\sigma ^{ - \frac{1}{2}}}
+\end{equation}
+
+In the complex analysis, the location $\left( {x,y} \right)$ is represented by $z = x + iy$. In addition, the complex variable $k = {k_1} + i{k_2}$, $i = \sqrt 1 $ can be introduced into equation (\ref{equ:Schr}), which leads to
+
+\begin{equation}\label{equ:Schr_turn}
+\left( { - \Delta  + q\left( z \right)} \right)\psi \left( {z,k} \right) = 0 z \in {R^2}
+\end{equation}
+
+There exist a unique solution $\psi $ for any $k \in C\backslash 0$. The leading behavior of $\psi \left( {z,k} \right)$ for fixed $k$ is ${e^{ikz}}$ as $\left| z \right|$ approaches infinity, $ikz = i\left( {{k_1} + i{k_2}} \right)\left( {x + iy} \right)$.
+Noted that $\Delta  = 4\partial \bar \partial  = 4\bar \partial \partial $, the function  $\mu \left( {z,k} \right) = {e^{ - ikz}}\psi \left( {z,k} \right)$ satisfies the classical Lippmann-Schwinger equation
+
+\begin{equation}\label{equ:L-S_A}
+\left( { - \Delta  - 4ik\bar \partial  + q\left( z \right)} \right)\mu \left( {z,k} \right) = 0 z \in {R^2}
+\end{equation}
+
+The solution of $\mu \left( {z,k} \right)$ requires the calculation of scattering transform $t\left( k \right)$, a key intermediate step and can be regarded as the non-linear Fourier transform of $q\left( z \right)$, which is calculated by the integral \cite{Nachman1996Global},
+
+\begin{equation}\label{equ:tk}
+t\left( k \right) = \int_{\delta \Omega } {{e^{i\overline k \overline z }}\left( {{\Lambda _q} - {\Lambda _0}} \right)\psi \left( {z,k} \right)d\sigma \left( z \right)}
+\end{equation}
+
+The following D-bar equation holds, which links $t\left( k \right)$ and $\mu \left( {z,k} \right)$
+
+\begin{equation}\label{equ:sol_Schr_A}
+{\bar \partial _{\bar k}}\mu \left( {z,k} \right) = \frac{{t\left( k \right)}}{{4\pi \bar k}}{e_{ - k}}\left( z \right)\overline {\mu \left( {z,k} \right)}
+\end{equation}
+where ${e_{ - k}}\left( z \right) = {e^{ - i\left( {kz + \overline k \overline z } \right)}} = {e^{ - 2i\left( {x{k_1} + y{k_2}} \right)}}$.
+
+It has been proved in \cite{Nachman1996Global} that the solution of equation (\ref{equ:sol_Schr_A}) can be calculated by the weakly singular Fredholm integral equation of the second kind, \emph{i.e.}
+
+\begin{equation}\label{equ:sol_Schr_B}
+\mu \left( {z,k'} \right) = 1 + \frac{1}{{{{\left( {2\pi } \right)}^2}}}\mathop \smallint \limits_{{R^2}} \frac{{t\left( k \right)}}{{\bar k\left( {k' - k} \right)}}{e_{ - k}}\left( z \right)\overline {\mu \left( {z,k} \right)} dk
+\end{equation}
+
+Furthermore, the relationship between conductivity and solution of $\mu \left( {z,k} \right)$ is $\sqrt \sigma   = \mu \left( {z,0} \right)$.
+
+The main steps of D-bar method are summarized as follows,
+\begin{enumerate}
+  \item the DN map of ${\Lambda _\sigma }$ is calculated and used to solve equation (\ref{equ:Schr_turn}). $\psi \sim {e^{ikz}}$ for large $k$.
+  \item the scattering transform is calculated by equation (\ref{equ:tk}) using DN map.
+  \item for $z \in \Omega$ solve $\mu (z,k)$ from the D-bar equation (\ref{equ:sol_Schr_B}).
+  \item reconstruct the conductivity by $\sqrt \sigma   = \mu \left( {z,0} \right)$ in the measuring region.
+\end{enumerate}
+
+The calculation of scattering transform, involving equation (\ref{equ:Schr}) and (\ref{equ:tk}), is usually time-consuming. Several approximation approaches can boost calculation efficiency.
+
+Replacing $\psi \left( {z,k} \right)$ by its asymptotic behavior ${e^{ikz}}$ in equation (\ref{equ:sol_Schr_A})\cite{1966SPhD101033F}, the approximation ${t^{{\rm{exp}}}}\left( k \right)$ can be obtained promptly,
+
+\begin{equation}\label{equ:t_exp}
+{t^{{\rm{exp}}}}\left( k \right) = \int_{\delta \Omega } {{e^{i\overline k \overline z }}\left( {{\Lambda _q} - {\Lambda _0}} \right){e^{ikz}}d\sigma \left( z \right)}
+\end{equation}
+
+To improve the accuracy of scattering transform calculation, the standard Green’s function of Laplacian $ - \frac{1}{{2\pi }}log\left| z \right|$ can be employed to obtained the approximate function of $\psi \left( {z,k} \right)$ according to equation (\ref{equ:Schr_turn}) \cite{Siltanen2000An}, from which more precise scattering transform can be calculated\cite{Mueller2003DIRECT}. The approximate function ${\left. {{\psi ^{\rm{B}}}\left( {z,k} \right)} \right|_{\partial \Omega }}$ is
+
+\begin{equation}\label{equ:fsi_B}
+{\left. {{\psi ^{\rm{B}}}\left( {z,k} \right)} \right|_{\partial \Omega }} = {e^{ikz}}{|_{\partial {\rm{\Omega }}}} - {S_0}\left( {{\Lambda _\sigma } - {\Lambda _1}} \right)\psi \left( { \cdot ,k} \right)
+\end{equation}
+where $\left( {{S_0}\phi } \right)\left( z \right) \equiv \int_{\partial {\rm{\Omega }}} {{G_0}\left( {z - \zeta } \right)\phi \left( \zeta  \right)d\sigma \left( \zeta  \right)} $, ${G_0}\left( z \right): =  - \frac{1}{{2\pi }}log\left| z \right|$.
+
+Accordingly, the approximate scattering transform is calculated by
+\begin{equation}\label{equ:t_B}
+{t^{\rm{B}}}\left( k \right) = \int_{\partial \Omega } {{e^{i\overline k \overline z }}\left( {{\Lambda _\sigma } - {\Lambda _1}} \right){\psi ^{\rm{B}}}\left( {z,k} \right)d\sigma \left( z \right)}
+\end{equation}
+
+In addition, the truncating strategy\cite{2009Regularized}, which can be regarded as a non-linear regularization method, is able to stabilize the calculation of equation (\ref{equ:Schr_turn}) and (\ref{equ:tk}), and obtain the smoothed reconstruction results.

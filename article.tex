@@ -3,6 +3,24 @@
 \usepackage{lineno,hyperref}
 \usepackage[margins]{trackchanges}
 \usepackage{cite}
+
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{stfloats}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage{lineno,hyperref}
+\usepackage{array}
+%\usepackage{booktabs}
+\usepackage{slashbox}
+\usepackage{colortbl}
 %\usepackage{xcolor}
 %\usepackage{amsmath,amssymb,amsfonts}
 %\usepackage{algorithmic}
@@ -15,7 +33,7 @@
 % \usepackage{textcomp}
 % \usepackage{tikz}
 
-\input{comments.tex}    % remove this if there is no comments 
+\input{comments.tex}    % remove this if there is no comments
 \input{math.tex}
 
 
@@ -24,12 +42,12 @@
 
 \begin{document}
 
-\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+\title{The latest development of reconstruction algorithms for electrical tomography}
 
 
 \author{
   Ziqiang Cui,~\IEEEmembership{Member,~IEEE,}
-  Andy~Lau, 
+  Qi~Guo, Qian~Zhao, Zihan~Xia
   and~Huaxiang~Wang,~\IEEEmembership{Senior~Member,~IEEE}% <-this % stops a space
 \thanks{Dr. Ziqiang Cui was with the School of
 of Electrical and Information Engineering, Tianjin University, Tianjin 300072, China.
@@ -44,21 +62,18 @@ The abstract goes here.
 \end{abstract}
 
 \begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
+IEEE
 \end{IEEEkeywords}
-
-
-\annote{Text}{Blablabla...abcdef}
-
 
 
 \IEEEpeerreviewmaketitle
 
-
-
 % Sections
 \input{sections/sec_intro.tex}
-\input{sections/sec_method.tex}
+\input{sections/sec_Dbar.tex}
+\input{sections/sec_DL.tex}
+\input{sections/sec_forward.tex}
+
 \input{sections/sec_results.tex}
 \input{sections/sec_cons.tex}
 
@@ -75,8 +90,8 @@ The authors would like to thank the financial supports from NSFC (Nos. 61671319 
 % Bibliography
 \bibliographystyle{IEEEtran}
 % Bibliography file
-\bibliography{../ieee-latex-template-v2/zotero}
+\bibliography{zotero}
 
 
 % \input{sections/biography.tex}
-\end{document}
+\end{document} 
